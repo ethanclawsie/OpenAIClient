@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Completion</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='text.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="{{ url_for('home') }}">Home</a>
+    <h1>Text Completion</h1>
+    <form action="#" method="POST">
+      <input type="text" name="promptbox" placeholder="prompt" />
+      <input type="text" name="temperaturebox" placeholder="temperature" />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+    <h1>{{text}}</h1>
+    <h2>Prompt: Enter what you want to complete</h2>
+    <h2>
+      Temperature: Higher values means the model will take more risks. If you're
+      asking it for a response where there's only one right answer, then you'd
+      want to set these lower. If you're looking for more diverse responses,
+      then you might want to set them higher. (0-1)
+    </h2>
+  </body>
+</html>

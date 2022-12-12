@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='image.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="{{ url_for('home') }}">Home</a>
+    <h1>Image Generator</h1>
+    <form action="#" method="POST">
+      <input type="text" name="promptbox" placeholder="prompt" />
+      <input type="text" name="size" placeholder="size" />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+    <img src="{{image}}" />
+    <h2>Prompt: Enter what you want to generate</h2>
+    <h2>Size: Enter the size of the image (256x256 / 512x512 / 1024x1024)</h2>
+  </body>
+</html>
